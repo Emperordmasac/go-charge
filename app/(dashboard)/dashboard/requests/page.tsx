@@ -1,13 +1,13 @@
 import { DashboardShell } from "@/components/shell";
 
 export const metadata = {
-  title: "Dashboard",
+  title: "Requests",
 };
 
-export default async function DashboardPage() {
+export default async function RequestsPage() {
   return (
     <div>
-      <h1>Dashboard page...</h1>
+      <h1>Requests page...</h1>
     </div>
   );
 }

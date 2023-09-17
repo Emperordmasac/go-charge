@@ -3,7 +3,7 @@ import localFont from "next/font/local";
 
 import "@/styles/globals.css";
 import { siteConfig } from "@/config/site";
-import { absoluteUrl, cn } from "@/lib/utils";
+import { cn } from "@/lib/utils";
 import { Toaster } from "@/components/ui/toaster";
 import { TailwindIndicator } from "@/components/tailwind-indicator";
 import { ThemeProvider } from "@/components/theme-provider";
@@ -81,7 +81,7 @@ export default function RootLayout({ children }: RootLayoutProps) {
           fontHeading.variable
         )}
       >
-        <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
+        <ThemeProvider attribute="class" defaultTheme="light" enableSystem>
           {children}
           <Toaster />
           <TailwindIndicator />

@@ -19,7 +19,7 @@ export function DashboardNav({ items }: DashboardNavProps) {
   }
 
   return (
-    <nav className="grid items-start gap-8 pt-16">
+    <nav className="grid items-start gap-8 pt-12">
       {items.map((item, index) => {
         const Icon = Icons[item.icon || "arrowRight"];
         return (
@@ -27,13 +27,24 @@ export function DashboardNav({ items }: DashboardNavProps) {
             <Link key={index} href={item.disabled ? "/" : item.href}>
               <span
                 className={cn(
-                  "group flex items-center rounded-md px-3 py-2 text-sm font-medium hover:bg-accent hover:text-accent-foreground",
-                  path === item.href ? "bg-accent" : "transparent",
+                  "group flex items-center rounded-md px-3 py-2 text-sm font-medium hover:text-[#EF895F] hover:fill-[#EF895F]",
+                  // path === item.href ? "bg-accent" : "transparent",
                   item.disabled && "cursor-not-allowed opacity-80"
                 )}
               >
-                <Icon className="mr-2 h-4 w-4" />
-                <span>{item.title}</span>
+                <Icon
+                  className={cn(
+                    "mr-2 h-4 w-4",
+                    path === item.href
+                      ? "fill-[#EF895F] hover:fill-[#EF895F]"
+                      : ""
+                  )}
+                />
+                <span
+                  className={cn(path === item.href ? "text-[#EF895F]" : "")}
+                >
+                  {item.title}
+                </span>
               </span>
             </Link>
           )

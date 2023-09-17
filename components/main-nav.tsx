@@ -4,14 +4,14 @@ import * as React from "react";
 import Link from "next/link";
 import { useSelectedLayoutSegment } from "next/navigation";
 
-import { MainNavItem } from "types";
+import { MainNavItem, SidebarNavItem } from "types";
 import { siteConfig } from "@/config/site";
 import { cn } from "@/lib/utils";
 import { Icons } from "@/components/icons";
 import { MobileNav } from "@/components/mobile-nav";
 
 interface MainNavProps {
-  items?: MainNavItem[];
+  items: SidebarNavItem[];
   children?: React.ReactNode;
 }
 
@@ -27,7 +27,7 @@ export function MainNav({ items, children }: MainNavProps) {
           {siteConfig.name}
         </span>
       </Link>
-      {items?.length ? (
+      {/* {items?.length ? (
         <nav className="hidden gap-6 md:flex">
           {items?.map((item, index) => (
             <Link
@@ -45,7 +45,7 @@ export function MainNav({ items, children }: MainNavProps) {
             </Link>
           ))}
         </nav>
-      ) : null}
+      ) : null} */}
       <button
         className="flex items-center space-x-2 md:hidden"
         onClick={() => setShowMobileMenu(!showMobileMenu)}
