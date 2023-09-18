@@ -14,6 +14,7 @@ import {
   CircularProgressRepairmen,
   CircularProgressEnergy,
 } from "@/components/ui/circular-progress";
+import { Car } from "lucide-react";
 
 export const metadata = {
   title: "Dashboard",
@@ -59,7 +60,7 @@ export default async function DashboardPage() {
         </CardHeader>
       </Card>
       {/* 2nd card-component */}
-      <div className="grid gap-5 md:grid-cols-3 lg:grid-cols-3 mt-10">
+      <div className="grid gap-5 md:grid-cols-3 lg:grid-cols-3 mt-[20px]">
         {/* 1st card */}
         <Card>
           <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
@@ -168,6 +169,53 @@ export default async function DashboardPage() {
           </CardContent>
         </Card>
       </div>
+
+      {/* 3rd card component */}
+      <Card className="w-[40%] mt-[20px] mb-[51px]">
+        <CardHeader>
+          <CardTitle className="text-[20px] font-[600] mb-[20px]">
+            Assigned Tasks
+          </CardTitle>
+        </CardHeader>
+        <CardContent className="flex flex-col gap-4">
+          {/* 1st */}
+          <Card className="flex flex-col">
+            <CardHeader className="flex flex-row items-center justify-between">
+              <CardTitle className="text-[16px] font-[400] text-[#757886]">
+                Checked up on all stations
+              </CardTitle>
+              <Icons.arrowRight />
+            </CardHeader>
+          </Card>
+          {/* 2nd */}
+          <Card className="flex flex-col space-y-10">
+            <CardHeader className="flex flex-row items-center justify-between">
+              <CardTitle className="text-[16px] font-[400] text-[#757886]">
+                Create your first job
+              </CardTitle>
+              <Icons.arrowRight />
+            </CardHeader>
+          </Card>
+          {/* 3rd */}
+          <Card className="flex flex-col space-y-10">
+            <CardHeader className="flex flex-row items-center justify-between">
+              <CardTitle className="text-[16px] font-[400] text-[#757886]">
+                Advertise a job
+              </CardTitle>
+              <Icons.arrowRight />
+            </CardHeader>
+          </Card>
+          {/* special */}
+          <Card className="flex flex-col space-y-10 bg-[#198E56] w-[80%]">
+            <CardHeader className="flex flex-row items-center justify-between">
+              <CardTitle className="text-[16px] font-[400] text-[#fff]">
+                Generate coupon code
+              </CardTitle>
+              <Icons.arrowRight />
+            </CardHeader>
+          </Card>
+        </CardContent>
+      </Card>
     </div>
   );
 }
