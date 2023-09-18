@@ -1,0 +1,57 @@
+/*
+Users
+*/
+
+.circle-bg-users {
+fill: none;
+stroke: #EF895F;
+opacity: 0.2;
+
+}
+
+.circle-progress-users {
+  fill: none;
+stroke: #EF895F;
+stroke-linecap: round;
+stroke-linejoin: round;
+}
+
+
+/*
+Energy stations
+*/
+
+
+.circle-progress-energy {
+  fill: none;
+stroke: #2478EC;
+stroke-linecap: round;
+stroke-linejoin: round;
+}
+
+
+.circle-bg-energy {
+fill: none;
+stroke: #2478EC;
+opacity: 0.2;
+
+}
+
+/*
+Repairmen
+*/
+
+
+.circle-bg-repairmen {
+fill: none;
+stroke: #21C107;
+opacity: 0.2;
+
+}
+
+.circle-progress-repairmen {
+  fill: none;
+stroke: #21C107;
+stroke-linecap: round;
+stroke-linejoin: round;
+}
