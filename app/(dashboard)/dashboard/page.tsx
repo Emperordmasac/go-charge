@@ -14,7 +14,7 @@ export const metadata = {
 
 export default async function DashboardPage() {
   return (
-    <div className="container">
+    <div className="">
       {/* overview card component */}
       <Card>
         <CardHeader className="">
