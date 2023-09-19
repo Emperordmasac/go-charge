@@ -1,20 +1,12 @@
 import Link from "next/link";
 
-import { DashboardShell } from "@/components/shell";
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardHeader,
-  CardTitle,
-} from "@/components/ui/card";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Icons } from "@/components/icons";
 import {
   CircularProgressUsers,
   CircularProgressRepairmen,
   CircularProgressEnergy,
 } from "@/components/ui/circular-progress";
-import { Car } from "lucide-react";
 
 export const metadata = {
   title: "Dashboard",
@@ -60,7 +52,7 @@ export default async function DashboardPage() {
         </CardHeader>
       </Card>
       {/* 2nd card-component */}
-      <div className="grid gap-5 md:grid-cols-3 lg:grid-cols-3 mt-[20px]">
+      <div className="grid gap-5 md:grid-cols-3 lg:grid-cols-3 mt-[20px] w-[90%]">
         {/* 1st card */}
         <Card>
           <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
@@ -193,7 +185,7 @@ export default async function DashboardPage() {
               <CardTitle className="text-[16px] font-[400] text-[#757886]">
                 Create your first job
               </CardTitle>
-              <Icons.arrowRight />
+              <Icons.lock />
             </CardHeader>
           </Card>
           {/* 3rd */}
@@ -202,7 +194,7 @@ export default async function DashboardPage() {
               <CardTitle className="text-[16px] font-[400] text-[#757886]">
                 Advertise a job
               </CardTitle>
-              <Icons.arrowRight />
+              <Icons.lock />
             </CardHeader>
           </Card>
           {/* special */}
@@ -211,7 +203,7 @@ export default async function DashboardPage() {
               <CardTitle className="text-[16px] font-[400] text-[#fff]">
                 Generate coupon code
               </CardTitle>
-              <Icons.arrowRight />
+              <Icons.checkIcon />
             </CardHeader>
           </Card>
         </CardContent>

@@ -22,10 +22,10 @@ const SetupAccountPage = () => {
       </Link>
       <div className="mx-auto flex w-full flex-col justify-center space-y-6 sm:w-[350px]">
         <div className="flex flex-col space-y-2 ">
-          <h1 className="text-2xl font-semibold tracking-tight">
+          <h1 className="text-[36px] font-semibold tracking-tight">
             Setup Your Account
           </h1>
-          <p className="text-sm text-muted-foreground">
+          <p className="text-[20px] text-muted-foreground">
             Tell us a bit about yourself
           </p>
         </div>

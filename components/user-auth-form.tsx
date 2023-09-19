@@ -54,7 +54,7 @@ export function UserAuthFormSignIn({ className, ...props }: UserAuthFormProps) {
             <div className="px-1 md:px-0">
               <Link
                 href="/forgot-password"
-                className="text-sm text-muted-foreground text-[#EF895F]"
+                className="text-[12px] text-muted-foreground text-[#EF895F]"
               >
                 Forgot password?
               </Link>

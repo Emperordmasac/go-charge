@@ -310,4 +310,60 @@ export const Icons = {
       <circle cx="6" cy="6.98779" r="6" fill={"fill-current" || "#EF895F"} />
     </svg>
   ),
+  lock: ({ ...props }: LucideProps) => (
+    <svg
+      width="21"
+      height="21"
+      viewBox="0 0 21 21"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+      {...props}
+    >
+      <g clip-path="url(#clip0_509_2747)">
+        <path
+          d="M16.3333 10.1545H4.66667C3.74619 10.1545 3 10.9007 3 11.8212V17.6545C3 18.575 3.74619 19.3212 4.66667 19.3212H16.3333C17.2538 19.3212 18 18.575 18 17.6545V11.8212C18 10.9007 17.2538 10.1545 16.3333 10.1545Z"
+          fill="#757886"
+          stroke="#757886"
+          strokeWidth="2"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+        />
+        <path
+          d="M6.33398 10.1545V6.82121C6.33398 5.71614 6.77297 4.65633 7.55437 3.87493C8.33577 3.09353 9.39558 2.65454 10.5007 2.65454C11.6057 2.65454 12.6655 3.09353 13.4469 3.87493C14.2283 4.65633 14.6673 5.71614 14.6673 6.82121V10.1545"
+          stroke="#757886"
+          strokeWidth="2"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+        />
+      </g>
+      <defs>
+        <clipPath id="clip0_509_2747">
+          <rect
+            width="20"
+            height="20"
+            fill="white"
+            transform="translate(0.5 0.987793)"
+          />
+        </clipPath>
+      </defs>
+    </svg>
+  ),
+  checkIcon: ({ ...props }: LucideProps) => (
+    <svg
+      width="21"
+      height="21"
+      viewBox="0 0 21 21"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+      {...props}
+    >
+      <path
+        d="M16.318 6.98779L8.318 14.9878L4.68164 11.3514"
+        stroke="white"
+        strokeWidth="2"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+    </svg>
+  ),
 };
