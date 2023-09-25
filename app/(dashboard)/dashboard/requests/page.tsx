@@ -6,6 +6,8 @@ import {
   PopoverTrigger,
   PopoverContent,
 } from "@/components/ui/popover";
+import { DataTable, columns } from "@/components/ui/data-table";
+import { PaymentsData } from "@/config/data-table";
 
 export const metadata = {
   title: "Requests",
@@ -39,9 +41,15 @@ export default async function RequestsPage() {
           </TabsList>
           <TabsContent value="charging">
             <ChargingContent />
+            <div className=" py-10">
+              <DataTable columns={columns} data={PaymentsData} />
+            </div>
           </TabsContent>
           <TabsContent value="servicing">
             <ServicingContent />
+            <div className=" py-10">
+              <DataTable columns={columns} data={PaymentsData} />
+            </div>
           </TabsContent>
         </Tabs>
       </div>
@@ -54,14 +62,17 @@ export const ChargingContent = () => {
     <div className="mt-[47px]">
       <Popover>
         <PopoverTrigger asChild>
-          <Button variant="outline" className="ml-auto text-[14px] py-[25px]">
+          <Button
+            variant="outline"
+            className="ml-auto text-[14px] py-[25px] mr-[20px]"
+          >
             All Status
             <Icons.chevronDown className="ml-[78px] h-4 w-4 text-[#0F0627]-foreground" />
           </Button>
         </PopoverTrigger>
       </Popover>
       <Popover>
-        <PopoverTrigger className="ml-[20px]" asChild>
+        <PopoverTrigger asChild>
           <Button variant="outline" className="ml-auto text-[14px] py-[25px]">
             Last Login
             <Icons.chevronDown className="ml-[78px] h-4 w-4 text-[#0F0627]-foreground" />
@@ -77,14 +88,17 @@ export const ServicingContent = () => {
     <div className="mt-[47px]">
       <Popover>
         <PopoverTrigger asChild>
-          <Button variant="outline" className="ml-auto text-[14px] py-[25px]">
+          <Button
+            variant="outline"
+            className="ml-auto text-[14px] py-[25px] mr-[20px]"
+          >
             All requests
             <Icons.chevronDown className="ml-[78px] h-4 w-4 text-[#0F0627]-foreground" />
           </Button>
         </PopoverTrigger>
       </Popover>
       <Popover>
-        <PopoverTrigger className="ml-[20px]" asChild>
+        <PopoverTrigger asChild>
           <Button variant="outline" className="ml-auto text-[14px] py-[25px]">
             Last Login
             <Icons.chevronDown className="ml-[78px] h-4 w-4 text-[#0F0627]-foreground" />

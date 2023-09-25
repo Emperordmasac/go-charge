@@ -40,3 +40,13 @@ export type SidebarNavItem = {
 export type DashboardConfig = {
   sidebarNav: SidebarNavItem[]
 }
+
+export type PaymentItem = {
+  id: number
+  name: string
+  status: 'active' | 'inactive' | 'accepted' | 'declined' | 'pending'
+  phoneNumber: string
+  email: string
+  rating: number
+  lastlogin: string
+}
