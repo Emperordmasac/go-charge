@@ -7,7 +7,11 @@ import {
   PopoverContent,
 } from "@/components/ui/popover";
 import { DataTable, columns } from "@/components/ui/data-table";
-import { PaymentsData } from "@/config/data-table";
+import { ChargingData, ServicingData } from "@/config/data-table";
+import {
+  ServicingDataTable,
+  servicingcolumns,
+} from "@/components/ui/servicing-data-table";
 
 export const metadata = {
   title: "Requests",
@@ -25,7 +29,7 @@ export default async function RequestsPage() {
               value="charging"
             >
               Charging
-              <span className="ml-[5px] text-[#fff] rounded-[30px] px-[9.5px] py-[3px] bg-[#221F1E]">
+              <span className="ml-[5px] text-[14px] text-[#fff] rounded-[30px] px-[9.5px] py-[3px] bg-[#221F1E]">
                 1250
               </span>
             </TabsTrigger>
@@ -34,7 +38,7 @@ export default async function RequestsPage() {
               value="servicing"
             >
               Servicing
-              <span className="ml-[5px] text-[#fff] rounded-[30px] px-[9.5px] py-[3px] bg-[#221F1E]">
+              <span className="ml-[5px] text-[14px] text-[#fff] rounded-[30px] px-[9.5px] py-[3px] bg-[#221F1E]">
                 1250
               </span>
             </TabsTrigger>
@@ -42,13 +46,16 @@ export default async function RequestsPage() {
           <TabsContent value="charging">
             <ChargingContent />
             <div className=" py-10">
-              <DataTable columns={columns} data={PaymentsData} />
+              <DataTable columns={columns} data={ChargingData} />
             </div>
           </TabsContent>
           <TabsContent value="servicing">
             <ServicingContent />
             <div className=" py-10">
-              <DataTable columns={columns} data={PaymentsData} />
+              <ServicingDataTable
+                columns={servicingcolumns}
+                data={ServicingData}
+              />
             </div>
           </TabsContent>
         </Tabs>

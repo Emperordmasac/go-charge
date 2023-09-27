@@ -50,3 +50,13 @@ export type PaymentItem = {
   rating: number
   lastlogin: string
 }
+
+export type ServicingItem = {
+  id: number
+  name: string
+  status: 'active' | 'inactive' | 'accepted' | 'declined' | 'pending'
+  phoneNumber: string
+  vehicleName: string
+  rating: number
+  servicingStatus: 'complete' | 'N/A' | 'ongoing'
+}

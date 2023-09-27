@@ -1,6 +1,6 @@
-import { PaymentItem } from '@/types'
+import { PaymentItem, ServicingItem } from '@/types'
 
-export const PaymentsData: PaymentItem[] = [
+export const ChargingData: PaymentItem[] = [
   {
     id: 1,
     name: 'Abu-Ekpeshie Emmanuel',
@@ -81,5 +81,89 @@ export const PaymentsData: PaymentItem[] = [
     email: 'emmanuelabu@mail.com',
     rating: 4,
     lastlogin: '28/05/21',
+  },
+]
+
+export const ServicingData: ServicingItem[] = [
+  {
+    id: 1,
+    name: 'Abu-Ekpeshie Emmanuel',
+    status: 'accepted',
+    phoneNumber: '+2348123456789',
+    vehicleName: 'Honda Clarity Electric',
+    rating: 4,
+    servicingStatus: 'complete',
+  },
+  {
+    id: 2,
+    name: 'Abu-Ekpeshie Emmanuel',
+    status: 'declined',
+    phoneNumber: '+2348123456789',
+    vehicleName: 'Honda Clarity Electric',
+    rating: 4,
+    servicingStatus: 'N/A',
+  },
+  {
+    id: 3,
+    name: 'Abu-Ekpeshie Emmanuel',
+    status: 'pending',
+    phoneNumber: '+2348123456789',
+    vehicleName: 'Honda Clarity Electric',
+    rating: 4,
+    servicingStatus: 'N/A',
+  },
+  {
+    id: 4,
+    name: 'Abu-Ekpeshie Emmanuel',
+    status: 'accepted',
+    phoneNumber: '+2348123456789',
+    vehicleName: 'Honda Clarity Electric',
+    rating: 4,
+    servicingStatus: 'ongoing',
+  },
+  {
+    id: 5,
+    name: 'Abu-Ekpeshie Emmanuel',
+    status: 'accepted',
+    phoneNumber: '+2348123456789',
+    vehicleName: 'Honda Clarity Electric',
+    rating: 4,
+    servicingStatus: 'complete',
+  },
+  {
+    id: 6,
+    name: 'Abu-Ekpeshie Emmanuel',
+    status: 'accepted',
+    phoneNumber: '+2348123456789',
+    vehicleName: 'Honda Clarity Electric',
+    rating: 4,
+    servicingStatus: 'ongoing',
+  },
+  {
+    id: 7,
+    name: 'Abu-Ekpeshie Emmanuel',
+    status: 'pending',
+    phoneNumber: '+2348123456789',
+    vehicleName: 'Honda Clarity Electric',
+    rating: 4,
+    servicingStatus: 'N/A',
+  },
+  {
+    id: 8,
+    name: 'Abu-Ekpeshie Emmanuel',
+    status: 'accepted',
+    phoneNumber: '+2348123456789',
+    vehicleName: 'Honda Clarity Electric',
+    rating: 4,
+    servicingStatus: 'complete',
+  },
+  {
+    id: 9,
+    name: 'Abu-Ekpeshie Emmanuel',
+    status: 'accepted',
+    phoneNumber: '+2348123456789',
+    vehicleName: 'Honda Clarity Electric',
+    rating: 4,
+    servicingStatus: 'complete',
   },
 ]

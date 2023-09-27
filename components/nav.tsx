@@ -7,6 +7,8 @@ import { SidebarNavItem } from "types";
 import { cn } from "@/lib/utils";
 import { Icons } from "@/components/icons";
 
+import { UserAccountNav } from "@/components/user-account-nav";
+
 interface DashboardNavProps {
   items: SidebarNavItem[];
 }
@@ -50,6 +52,10 @@ export function DashboardNav({ items }: DashboardNavProps) {
           )
         );
       })}
+
+      <div className="ml-2 mt-[308px]">
+        <UserAccountNav user={{}} />
+      </div>
     </nav>
   );
 }
