@@ -23,7 +23,7 @@ export default async function RequestsPage() {
       <h1 className="text-[#000] text-[36px] font-semibold">Requests</h1>
       <div className="mt-[25px] w-[100vw] ">
         <Tabs defaultValue="charging" className="">
-          <TabsList className="border-b pb-[10px] w-[100%] -ml-[14px]">
+          <TabsList className="border-b pb-[4px] w-[100%] -ml-[14px]">
             <TabsTrigger
               className="text-[#221F1E] text-[18px]"
               value="charging"
