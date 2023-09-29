@@ -60,3 +60,33 @@ export type ServicingItem = {
   rating: number
   servicingStatus: 'complete' | 'N/A' | 'ongoing'
 }
+
+export type UserItem = {
+  id: number
+  name: string
+  userID: string
+  status: 'active' | 'inactive'
+  phoneNumber: string
+  email: string
+  rating: number
+}
+
+export type EnergyDealerItem = {
+  id: number
+  name: string
+  status: 'active' | 'inactive' | 'accepted' | 'declined' | 'pending'
+  phoneNumber: string
+  email: string
+  rating: number
+  lastlogin: string
+}
+
+export type RepairmenItem = {
+  id: number
+  name: string
+  status: 'active' | 'inactive' | 'accepted' | 'declined' | 'pending'
+  phoneNumber: string
+  email: string
+  rating: number
+  lastlogin: string
+}
