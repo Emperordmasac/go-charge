@@ -44,6 +44,16 @@ export type DashboardConfig = {
 export type PaymentItem = {
   id: number
   name: string
+  status: 'cleared' | 'uncleared'
+  phoneNumber: string
+  paymentFor: string
+  amount: number
+  dueDate: string
+}
+
+export type ChargingItem = {
+  id: number
+  name: string
   status: 'active' | 'inactive' | 'accepted' | 'declined' | 'pending'
   phoneNumber: string
   email: string

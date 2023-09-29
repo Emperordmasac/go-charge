@@ -1,12 +1,13 @@
 import {
-  PaymentItem,
+  ChargingItem,
   ServicingItem,
   UserItem,
   EnergyDealerItem,
   RepairmenItem,
+  PaymentItem,
 } from '@/types'
 
-export const ChargingData: PaymentItem[] = [
+export const ChargingData: ChargingItem[] = [
   {
     id: 1,
     name: 'Abu-Ekpeshie Emmanuel',
@@ -423,5 +424,89 @@ export const RepairmenTableData: RepairmenItem[] = [
     email: 'emmanuelabu@mail.com',
     rating: 4,
     lastlogin: '28/05/21',
+  },
+]
+
+export const PaymentsTableData: PaymentItem[] = [
+  {
+    id: 1,
+    name: 'Abu-Ekpeshie Emmanuel',
+    status: 'cleared',
+    phoneNumber: '+2348123456789',
+    paymentFor: 'charging',
+    amount: 3500.0,
+    dueDate: '28/05/21',
+  },
+  {
+    id: 2,
+    name: 'Abu-Ekpeshie Emmanuel',
+    status: 'cleared',
+    phoneNumber: '+2348123456789',
+    paymentFor: 'charging',
+    amount: 3500.0,
+    dueDate: '28/05/21',
+  },
+  {
+    id: 3,
+    name: 'Abu-Ekpeshie Emmanuel',
+    status: 'cleared',
+    phoneNumber: '+2348123456789',
+    paymentFor: 'charging',
+    amount: 3500.0,
+    dueDate: '28/05/21',
+  },
+  {
+    id: 4,
+    name: 'Abu-Ekpeshie Emmanuel',
+    status: 'cleared',
+    phoneNumber: '+2348123456789',
+    paymentFor: 'charging',
+    amount: 3500.0,
+    dueDate: '28/05/21',
+  },
+  {
+    id: 5,
+    name: 'Abu-Ekpeshie Emmanuel',
+    status: 'cleared',
+    phoneNumber: '+2348123456789',
+    paymentFor: 'charging',
+    amount: 3500.0,
+    dueDate: '28/05/21',
+  },
+  {
+    id: 6,
+    name: 'Abu-Ekpeshie Emmanuel',
+    status: 'uncleared',
+    phoneNumber: '+2348123456789',
+    paymentFor: 'charging',
+    amount: 3500.0,
+    dueDate: '28/05/21',
+  },
+  {
+    id: 7,
+    name: 'Abu-Ekpeshie Emmanuel',
+    status: 'uncleared',
+    phoneNumber: '+2348123456789',
+    paymentFor: 'charging',
+    amount: 3500.0,
+    dueDate: '28/05/21',
+  },
+  {
+    id: 8,
+    name: 'Abu-Ekpeshie Emmanuel',
+    status: 'uncleared',
+    phoneNumber: '+2348123456789',
+    paymentFor: 'charging',
+    amount: 3500.0,
+    dueDate: '28/05/21',
+  },
+  {
+    id: 9,
+    name: 'Abu-Ekpeshie Emmanuel',
+    status: 'uncleared',
+    phoneNumber: '+2348123456789',
+    paymentFor: 'charging',
+    amount: 3500.0,
+    dueDate: '28/05/21',
   },
 ]
