@@ -64,7 +64,7 @@ export default async function RequestsPage() {
   );
 }
 
-export const ChargingContent = () => {
+const ChargingContent = () => {
   return (
     <div className="mt-[47px]">
       <Popover>
@@ -90,7 +90,7 @@ export const ChargingContent = () => {
   );
 };
 
-export const ServicingContent = () => {
+const ServicingContent = () => {
   return (
     <div className="mt-[47px]">
       <Popover>

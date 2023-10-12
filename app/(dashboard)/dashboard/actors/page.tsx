@@ -90,7 +90,7 @@ export default async function ActorsPage() {
   );
 }
 
-export const UserContent = () => {
+const UserContent = () => {
   return (
     <div className="mt-[47px]">
       <Popover>
@@ -116,7 +116,7 @@ export const UserContent = () => {
   );
 };
 
-export const EnergyDealersContent = () => {
+const EnergyDealersContent = () => {
   return (
     <div className="mt-[47px]">
       <Popover>
@@ -142,7 +142,7 @@ export const EnergyDealersContent = () => {
   );
 };
 
-export const RepairmenContent = () => {
+const RepairmenContent = () => {
   return (
     <div className="mt-[47px]">
       <Popover>

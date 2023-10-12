@@ -28,7 +28,7 @@ export default async function PaymentsPage() {
   );
 }
 
-export const PaymentsContent = () => {
+const PaymentsContent = () => {
   return (
     <div className="mt-[47px]">
       <Popover>
