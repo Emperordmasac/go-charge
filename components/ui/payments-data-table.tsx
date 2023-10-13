@@ -24,6 +24,17 @@ import {
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
 import { Button } from "@/components/ui/button";
+import {
+  Dialog,
+  DialogContent,
+  DialogDescription,
+  DialogFooter,
+  DialogHeader,
+  DialogTitle,
+  DialogTrigger,
+} from "@/components/ui/dialog";
+import { Input } from "@/components/ui/input";
+import { Label } from "@/components/ui/label";
 
 //-- define our columns.
 //-- Columns are where you define the core of what your table will look like.
@@ -177,8 +188,74 @@ export function PaymentsDataTable<TData, TValue>({
                 data-state={row.getIsSelected() && "selected"}
               >
                 {row.getVisibleCells().map((cell) => (
-                  <TableCell key={cell.id}>
-                    {flexRender(cell.column.columnDef.cell, cell.getContext())}
+                  <TableCell className="cursor-pointer" key={cell.id}>
+                    <Dialog>
+                      <DialogTrigger>
+                        {flexRender(
+                          cell.column.columnDef.cell,
+                          cell.getContext()
+                        )}
+                      </DialogTrigger>
+                      <DialogContent>
+                        <DialogHeader>
+                          <DialogTitle>Payment Details</DialogTitle>
+                        </DialogHeader>
+                        <div className="flex justify-between px-5">
+                          <div>
+                            <h2 className="text-[##757886] mb-5">
+                              Sender
+                              <span className="text-sm text-[#000] block mt-1">
+                                Abu-Ekpeshie Emmanuel
+                              </span>
+                            </h2>
+                            <h2 className="text-[##757886] mb-5">
+                              Receiver
+                              <span className="text-sm text-[#000] block mt-1">
+                                Total Energies
+                              </span>
+                            </h2>
+                            <h2 className="text-[##757886] mb-5">
+                              Anount
+                              <span className="text-sm text-[#000] block mt-1">
+                                #3500.00
+                              </span>
+                            </h2>
+                            <h2 className="text-[##757886] mb-5">
+                              Status
+                              <span className="text-sm block mt-1 py-[5px] px-[10px] rounded-[10px] bg-[#21C1071A] text-[#21C107] w-fit">
+                                cleared
+                              </span>
+                            </h2>
+                          </div>
+                          <div>
+                            <h2 className="text-[##757886] mb-5">
+                              Phone Number
+                              <span className="text-sm text-[#000] block mt-1">
+                                08123456789
+                              </span>
+                            </h2>
+                            <h2 className="text-[##757886] mb-5">
+                              Sender
+                              <span className="text-sm text-[#000] block mt-1">
+                                08123456789
+                              </span>
+                            </h2>
+                            <h2 className="text-[##757886] mb-5">
+                              Payment for
+                              <span className="text-sm text-[#000] block mt-1">
+                                Servicing
+                              </span>
+                            </h2>
+                            <h2 className="text-[##757886] mb-5">
+                              Due Date
+                              <span className="text-sm text-[#000] block mt-1">
+                                28/05/21
+                              </span>
+                            </h2>
+                          </div>
+                        </div>
+                      </DialogContent>
+                    </Dialog>
                   </TableCell>
                 ))}
               </TableRow>
