@@ -25,7 +25,7 @@ const ForgotPasswordPage = () => {
           <h1 className="text-[36px] font-semibold tracking-tight">
             Forgot Password
           </h1>
-          <p className="text-[20px] text-muted-foreground">
+          <p className="text-[20px] text-[#8A8A8F]">
             Enter your email to receive an OTP to reset your password
           </p>
         </div>
