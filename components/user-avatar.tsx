@@ -22,3 +22,17 @@ export function UserAvatar({ user, ...props }) {
     </Avatar>
   );
 }
+
+export function NotificationAvatar({ user, ...props }) {
+  return (
+    <Avatar {...props}>
+      {user.image ? (
+        <AvatarImage alt="Picture" src={user.image} />
+      ) : (
+        <AvatarFallback>
+          <Icons.bell className="h-6 w-6" />
+        </AvatarFallback>
+      )}
+    </Avatar>
+  );
+}

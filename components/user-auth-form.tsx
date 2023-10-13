@@ -46,15 +46,15 @@ export function UserAuthFormSignIn({ className, ...props }: UserAuthFormProps) {
               <Checkbox id="terms" />
               <label
                 htmlFor="terms"
-                className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
+                className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70 !text-[#8A8A8F]"
               >
                 keep me logged in
               </label>
             </div>
-            <div className="px-1 md:px-0">
+            <div className="px-1 md:px-0 !text-[#EF895F]">
               <Link
                 href="/forgot-password"
-                className="text-[12px] text-muted-foreground text-[#EF895F]"
+                className="text-[12px] text-muted-foreground !text-[#EF895F]"
               >
                 Forgot password?
               </Link>
