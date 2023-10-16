@@ -14,7 +14,7 @@ export const metadata = {
 
 export default async function DashboardPage() {
   return (
-    <div className="">
+    <div className="ml-[18px]">
       {/* overview card component */}
       <Card>
         <CardHeader className="">

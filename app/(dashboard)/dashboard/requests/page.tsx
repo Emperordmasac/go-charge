@@ -20,10 +20,12 @@ export const metadata = {
 export default async function RequestsPage() {
   return (
     <div className="">
-      <h1 className="text-[#000] text-[36px] font-semibold">Requests</h1>
+      <h1 className="text-[#000] text-[36px] font-semibold pl-[58px]">
+        Requests
+      </h1>
       <div className="mt-[25px] w-[100vw] ">
         <Tabs defaultValue="charging" className="">
-          <TabsList className="border-b pb-[4px] w-[100%] -ml-[14px]">
+          <TabsList className="border-b pb-[4px] w-[100%] -ml-[14px] pl-[58px]">
             <TabsTrigger
               className="text-[#221F1E] text-[18px]"
               value="charging"
@@ -45,13 +47,13 @@ export default async function RequestsPage() {
           </TabsList>
           <TabsContent value="charging">
             <ChargingContent />
-            <div className=" py-10">
+            <div className=" py-10 pl-[58px]">
               <DataTable columns={columns} data={ChargingData} />
             </div>
           </TabsContent>
           <TabsContent value="servicing">
             <ServicingContent />
-            <div className=" py-10">
+            <div className=" py-10 pl-[58px]">
               <ServicingDataTable
                 columns={servicingcolumns}
                 data={ServicingData}
@@ -66,7 +68,7 @@ export default async function RequestsPage() {
 
 const ChargingContent = () => {
   return (
-    <div className="mt-[47px]">
+    <div className="mt-[47px] pl-[58px]">
       <Popover>
         <PopoverTrigger asChild>
           <Button
@@ -92,7 +94,7 @@ const ChargingContent = () => {
 
 const ServicingContent = () => {
   return (
-    <div className="mt-[47px]">
+    <div className="mt-[47px] pl-[58px]">
       <Popover>
         <PopoverTrigger asChild>
           <Button

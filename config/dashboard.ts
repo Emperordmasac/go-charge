@@ -29,8 +29,33 @@ export const dashboardConfig: DashboardConfig = {
     },
     {
       title: 'Settings',
-      href: '/dashboard/settings',
+      href: '/dashboard/settings/profile',
       icon: 'settings',
+    },
+  ],
+}
+
+export const settingsDashboard: DashboardConfig = {
+  sidebarNav: [
+    {
+      title: 'Profile',
+      href: '/dashboard/settings/profile',
+    },
+    {
+      title: 'Pricing',
+      href: '/dashboard/settings/pricing',
+    },
+    {
+      title: 'Team Managment',
+      href: '/dashboard/settings/team-management',
+    },
+    {
+      title: 'API Management',
+      href: '/dashboard/settings/api-management',
+    },
+    {
+      title: 'Push Notifications',
+      href: '/dashboard/settings/push-notifications',
     },
   ],
 }

@@ -31,10 +31,12 @@ export const metadata = {
 export default async function ActorsPage() {
   return (
     <div className="">
-      <h1 className="text-[#000] text-[36px] font-semibold">Actors</h1>
+      <h1 className="text-[#000] text-[36px] font-semibold pl-[58px]">
+        Actors
+      </h1>
       <div className="mt-[25px] w-[100vw] ">
         <Tabs defaultValue="user" className="">
-          <TabsList className="border-b pb-[4px] w-[100%] -ml-[14px]">
+          <TabsList className="border-b pb-[4px] w-[100%] -ml-[14px] pl-[58px]">
             <TabsTrigger className="text-[#221F1E] text-[18px]" value="user">
               User
               <span className="ml-[5px] text-[14px] text-[#fff] rounded-[30px] px-[9.5px] py-[3px] bg-[#221F1E]">
@@ -62,13 +64,13 @@ export default async function ActorsPage() {
           </TabsList>
           <TabsContent value="user">
             <UserContent />
-            <div className=" py-10">
+            <div className=" py-10 pl-[58px]">
               <UserDataTable columns={userDataColumns} data={UserTableData} />
             </div>
           </TabsContent>
           <TabsContent value="energyDealer">
             <EnergyDealersContent />
-            <div className=" py-10">
+            <div className=" py-10 pl-[58px]">
               <EnergyDataTable
                 columns={energycolumns}
                 data={EnergyDealerTableData}
@@ -77,7 +79,7 @@ export default async function ActorsPage() {
           </TabsContent>
           <TabsContent value="repairmen">
             <RepairmenContent />
-            <div className=" py-10">
+            <div className=" py-10 pl-[58px]">
               <RepairmenDataTable
                 columns={repairmenDataColumns}
                 data={RepairmenTableData}
@@ -92,7 +94,7 @@ export default async function ActorsPage() {
 
 const UserContent = () => {
   return (
-    <div className="mt-[47px]">
+    <div className="mt-[47px] pl-[58px]">
       <Popover>
         <PopoverTrigger asChild>
           <Button
@@ -118,7 +120,7 @@ const UserContent = () => {
 
 const EnergyDealersContent = () => {
   return (
-    <div className="mt-[47px]">
+    <div className="mt-[47px] pl-[58px]">
       <Popover>
         <PopoverTrigger asChild>
           <Button
@@ -144,7 +146,7 @@ const EnergyDealersContent = () => {
 
 const RepairmenContent = () => {
   return (
-    <div className="mt-[47px]">
+    <div className="mt-[47px] pl-[58px]">
       <Popover>
         <PopoverTrigger asChild>
           <Button
