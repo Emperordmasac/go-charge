@@ -14,10 +14,12 @@ export const metadata = {
 export default async function PaymentsPage() {
   return (
     <div className="">
-      <h1 className="text-[#000] text-[36px] font-semibold">Payments</h1>
+      <h1 className="text-[#000] text-[36px] font-semibold pl-[58px]">
+        Payments
+      </h1>
       <div className="mt-[25px] w-[100vw] ">
         <PaymentsContent />
-        <div className=" py-10">
+        <div className=" py-10 pl-[58px]">
           <PaymentsDataTable
             columns={paymentsColumns}
             data={PaymentsTableData}
@@ -30,7 +32,7 @@ export default async function PaymentsPage() {
 
 const PaymentsContent = () => {
   return (
-    <div className="mt-[47px]">
+    <div className="mt-[47px] pl-[58px]">
       <Popover>
         <PopoverTrigger asChild>
           <Button

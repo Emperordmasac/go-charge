@@ -33,7 +33,7 @@ export default async function DashboardLayout({
           </div>
         </div> */}
       </header>
-      <div className="w-full mx-auto px-8 grid flex-1 gap-12 md:grid-cols-[200px_1fr]">
+      <div className="w-full mx-auto px-8 grid flex-1 md:grid-cols-[200px_1fr]">
         <div className="border-r">
           <aside className="hidden w-[200px] flex-col md:flex ">
             <DashboardNav items={dashboardConfig.sidebarNav} />
