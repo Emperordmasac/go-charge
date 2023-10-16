@@ -101,3 +101,10 @@ export type RepairmenItem = {
   rating: number
   lastlogin: string
 }
+
+export type SettingsItem = {
+  id: number
+  name: string
+  email: string
+  role: string
+}

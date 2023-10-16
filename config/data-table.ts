@@ -5,6 +5,7 @@ import {
   EnergyDealerItem,
   RepairmenItem,
   PaymentItem,
+  SettingsItem,
 } from '@/types'
 
 export const ChargingData: ChargingItem[] = [
@@ -508,5 +509,38 @@ export const PaymentsTableData: PaymentItem[] = [
     paymentFor: 'charging',
     amount: 3500.0,
     dueDate: '28/05/21',
+  },
+]
+
+export const SettingsTableData: SettingsItem[] = [
+  {
+    id: 1,
+    name: 'Abu-Ekpeshie Emmanuel',
+    email: 'emmanuelabu@gmail.com',
+    role: 'Admin',
+  },
+  {
+    id: 2,
+    name: 'Abu-Ekpeshie Emmanuel',
+    email: 'emmanuelabu@gmail.com',
+    role: 'Admin',
+  },
+  {
+    id: 3,
+    name: 'Abu-Ekpeshie Emmanuel',
+    email: 'emmanuelabu@gmail.com',
+    role: 'Admin',
+  },
+  {
+    id: 4,
+    name: 'Abu-Ekpeshie Emmanuel',
+    email: 'emmanuelabu@gmail.com',
+    role: 'Admin',
+  },
+  {
+    id: 5,
+    name: 'Abu-Ekpeshie Emmanuel',
+    email: 'emmanuelabu@gmail.com',
+    role: 'Admin',
   },
 ]
