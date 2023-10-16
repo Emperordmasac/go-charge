@@ -3,6 +3,11 @@ import { SettingsDashboard } from "@/components/nav";
 import { Input } from "@/components/ui/input";
 import { Icons } from "@/components/icons";
 import { Button } from "@/components/ui/button";
+import {
+  SettingsDataTable,
+  settingsColumns,
+} from "@/components/ui/settings-data-table";
+import { SettingsTableData } from "@/config/data-table";
 
 export async function generateStaticParams() {
   return settingsDashboard.sidebarNav.map((link) => ({
@@ -23,11 +28,7 @@ export default async function SettingsdPage({ params }) {
       content = <PricingContent />;
       break;
     case "team-management":
-      content = (
-        <div>
-          <h1>Team management content</h1>
-        </div>
-      );
+      content = <TeamManagement />;
       break;
     case "api-management":
       content = (
@@ -60,13 +61,13 @@ export default async function SettingsdPage({ params }) {
         </div>
       </header>
       {/* settings sidebar */}
-      <div className="w-full mx-auto px-8 grid flex-1 gap-12 md:grid-cols-[200px_1fr]">
+      <div className="w-full mx-auto px-8 grid flex-1 md:grid-cols-[200px_1fr]">
         <div className="border-r">
           <aside className="hidden w-[200px] flex-col md:flex ">
             <SettingsDashboard items={settingsDashboard.sidebarNav} />
           </aside>
         </div>
-        <main className="flex w-full flex-1 flex-col overflow-hidden pt-8">
+        <main className="flex w-full flex-1 flex-col overflow-hidden pt-8 ">
           {content}
         </main>
       </div>
@@ -76,8 +77,8 @@ export default async function SettingsdPage({ params }) {
 
 const ProfileContent = () => {
   return (
-    <div className="mt-[30px] ml-[33px] flex gap-[66px]">
-      <div className="flex flex-col justify-center w-fit items-center cursor-pointer">
+    <div className="mt-[30px] ml-[33px] flex gap-[66px] pl-[30px] items-center">
+      <div className="flex flex-col justify-center w-fit items-center cursor-pointer -mt-[85px]">
         <Icons.profile />
         <span className="text-[#EF895F] text-[12px] mt-[2px]">
           add a picture
@@ -110,7 +111,7 @@ const ProfileContent = () => {
 
 const PricingContent = () => {
   return (
-    <div className="mt-[20px]">
+    <div className="mt-[20px] pl-[30px]">
       <h2 className="text-[#000] text-[16px] font-semibold">
         Charging base fee
       </h2>
@@ -120,6 +121,67 @@ const PricingContent = () => {
           charging cannot go lower than this.
         </p>
         <Input className="w-[20%] mt-[15px]" />
+      </div>
+    </div>
+  );
+};
+
+const TeamManagement = () => {
+  return (
+    <div className="w-full">
+      {/* top */}
+      <div className="border-b w-full pl-[30px] pb-[29px] flex gap-[56px]">
+        {/* left  */}
+        <div>
+          <h2 className="text-[#000] text-[16px] font-semibold">Your Team</h2>
+          <div className="flex gap-[70px]">
+            <p className="text-[#8A8A8F] text-[14px] max-w-[243px] mt-[5px]">
+              Manage your existing team and edit roles / permissions.
+            </p>
+          </div>
+        </div>
+        {/* right */}
+        <div className="w-[700px] p-0 m-0 border border-solid border-[#8A8A8F14] rounded-[15px]">
+          <SettingsDataTable
+            columns={settingsColumns}
+            data={SettingsTableData}
+          />
+        </div>
+      </div>
+      {/* bottom */}
+      <div className="w-full pl-[30px] mt-[30px] flex gap-[56px]">
+        {/* left  */}
+        <div>
+          <h2 className="text-[#000] text-[16px] font-semibold">
+            Invite team members
+          </h2>
+          <div className="flex gap-[70px]">
+            <p className="text-[#8A8A8F] text-[14px] max-w-[243px] mt-[5px]">
+              Admins can edit and make changes as they see fit. Other roles are
+              prohibited to their specific roles.
+            </p>
+          </div>
+        </div>
+        {/* right */}
+        <div>
+          <div className="grid grid-cols-2 gap-[10px]">
+            <Input className="w-[319px]" placeholder="Email address" />
+            <Input className="w-[319px]" placeholder="Role" />
+            <Input
+              className="w-[319px] mt-[9.5px]"
+              placeholder="Email address"
+            />
+            <Input className="w-[319px] mt-[9.5px]" placeholder="Role" />
+            <Input
+              className="w-[319px] mt-[9.5px]"
+              placeholder="Email address"
+            />
+            <Input className="w-[319px] mt-[9.5px]" placeholder="Role" />
+          </div>
+          <div className="w-full flex justify-end mt-[39.5px]">
+            <Button className="bg-[#EF895F] w-[319px]">Send Invite</Button>
+          </div>
+        </div>
       </div>
     </div>
   );
