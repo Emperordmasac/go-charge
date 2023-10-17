@@ -8,6 +8,7 @@ import {
   settingsColumns,
 } from "@/components/ui/settings-data-table";
 import { SettingsTableData } from "@/config/data-table";
+import { Textarea } from "@/components/ui/textarea";
 
 export async function generateStaticParams() {
   return settingsDashboard.sidebarNav.map((link) => ({
@@ -31,18 +32,10 @@ export default async function SettingsdPage({ params }) {
       content = <TeamManagement />;
       break;
     case "api-management":
-      content = (
-        <div>
-          <h1>api-management content</h1>
-        </div>
-      );
+      content = <ApiManagement />;
       break;
     case "push-notifications":
-      content = (
-        <div>
-          <h1>push notifications content</h1>
-        </div>
-      );
+      content = <PushNotifications />;
       break;
     default:
       content = (
@@ -129,9 +122,7 @@ const PricingContent = () => {
 const TeamManagement = () => {
   return (
     <div className="w-full">
-      {/* top */}
       <div className="border-b w-full pl-[30px] pb-[29px] flex gap-[56px]">
-        {/* left  */}
         <div>
           <h2 className="text-[#000] text-[16px] font-semibold">Your Team</h2>
           <div className="flex gap-[70px]">
@@ -140,7 +131,6 @@ const TeamManagement = () => {
             </p>
           </div>
         </div>
-        {/* right */}
         <div className="w-[700px] p-0 m-0 border border-solid border-[#8A8A8F14] rounded-[15px]">
           <SettingsDataTable
             columns={settingsColumns}
@@ -148,9 +138,7 @@ const TeamManagement = () => {
           />
         </div>
       </div>
-      {/* bottom */}
       <div className="w-full pl-[30px] mt-[30px] flex gap-[56px]">
-        {/* left  */}
         <div>
           <h2 className="text-[#000] text-[16px] font-semibold">
             Invite team members
@@ -162,7 +150,7 @@ const TeamManagement = () => {
             </p>
           </div>
         </div>
-        {/* right */}
+
         <div>
           <div className="grid grid-cols-2 gap-[10px]">
             <Input className="w-[319px]" placeholder="Email address" />
@@ -182,6 +170,42 @@ const TeamManagement = () => {
             <Button className="bg-[#EF895F] w-[319px]">Send Invite</Button>
           </div>
         </div>
+      </div>
+    </div>
+  );
+};
+
+const ApiManagement = () => {
+  return (
+    <div className="mt-[20px] pl-[30px]">
+      <h2 className="text-[#000] text-[16px] font-semibold">API Management</h2>
+      <div className="flex gap-[70px]">
+        <p className="text-[#8A8A8F] text-[14px] max-w-[243px] mt-[5px]">
+          Coming Soon...
+        </p>
+      </div>
+    </div>
+  );
+};
+
+const PushNotifications = () => {
+  return (
+    <div className="mt-[20px] pl-[30px]">
+      <Input
+        className="w-[658px] h-[50px] border border-solid border-[#EAEDF5] bg-[#F8F8F9] mb-[40px]"
+        placeholder="Notification Title"
+      />
+      <Textarea
+        className="w-[658px] h-[220px] border border-solid border-[#EAEDF5] bg-[#F8F8F9] mb-[130px] px-10"
+        placeholder="Notification Body"
+      />
+      <div className="w-full flex gap-[20px]">
+        <Button className="bg-[#fff] w-[319px] h-[50px] border border-solid border-[#000] text-[#000]">
+          Cancel
+        </Button>
+        <Button className="bg-[#EF895F] w-[319px] h-[50px]">
+          Send Notification
+        </Button>
       </div>
     </div>
   );
